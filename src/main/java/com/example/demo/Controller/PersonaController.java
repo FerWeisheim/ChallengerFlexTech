@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.example.demo.Controller;
-
+import org.springframework.web.bind.annotation.CrossOrigin;
 import com.example.demo.Entity.Persona;
 import com.example.demo.Services.PersonaServiceImp;
 import java.util.List;
@@ -23,7 +23,9 @@ import org.springframework.web.bind.annotation.RestController;
  * @author Guilty
  */
 @RestController
+@CrossOrigin(origins = "*")
 public class PersonaController {
+
     @Autowired PersonaServiceImp iPersonaService;
     
     @GetMapping("Persona/traer")
